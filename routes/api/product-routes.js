@@ -148,21 +148,21 @@ router.delete('/:id', (req, res) => {
   // delete one product by its `id` value
 
   Product.destroy({
-        where: {
-            id: req.params.id
-        }
+    where: {
+      id: req.params.id
+    }
+  })
+    .then(dbProData => {
+      if (!dbProData) {
+        res.status(404).json({ message: "No category with a matching ID" });
+        return;
+      }
+      res.json(dbProData);
     })
-        .then(dbProData => {
-            if (!dbProData) {
-                res.status(404).json({ message: "No category with a matching ID" });
-                return;
-            }
-            res.json(dbProData);
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 
