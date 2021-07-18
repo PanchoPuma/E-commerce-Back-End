@@ -12,7 +12,9 @@ router.get('/', (req, res) => {
     include: [
       {
         model: Product,
-        attributes: ["id", "product", "stock", "price", "category_id"]
+        attributes: ["id", "product", "stock", "price", "category_id"],
+        through: ProductTag,
+        as: "product"
       }
     ]
   })
@@ -27,6 +29,31 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   // find a single tag by its `id`
   // be sure to include its associated Product data
+
+  Tag.findOne({
+    attributes: ["id", "tag_name"],
+    include: [
+      {
+        model: Product,
+        attributes: ["id", "product", "stock", "price", "category_id"],
+        through: ProductTag,
+        as: "product"
+      }
+    ]
+  })
+  .then(dbTagData => {
+    if (!dbTagData) {
+      res.status(404).json({ message: "No category with a matching ID" });
+      return;
+    }
+    res.json(dbTagData);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+
+
 });
 
 router.post('/', (req, res) => {
