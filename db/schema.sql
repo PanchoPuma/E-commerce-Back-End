@@ -7,4 +7,4 @@ CREATE DATABASE ecommerce_db;
 
 
 -- USE DATABASE
-USE ecommerce_db
+USE ecommerce_db;
