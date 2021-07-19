@@ -9,6 +9,6 @@ To access this app, you need to donwload it, install it on your computer alongsi
 
 ## Screenshot
 
-![ScreenShot](/assets/images/sample1.jpeg)
-![ScreenShot](/assets/images/sample2.jpeg)
-![ScreenShot](/assets/images/sample3.jpeg)
+![ScreenShot](/assets/images/Sample1.jpeg)
+![ScreenShot](/assets/images/Sample2.jpeg)
+![ScreenShot](/assets/images/Sample3.jpeg)
