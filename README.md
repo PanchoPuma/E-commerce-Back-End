@@ -12,4 +12,5 @@ To access this app, you need to donwload it, install it on your computer alongsi
 ![ScreenShot](/assets/images/Sample1.jpeg)
 ![ScreenShot](/assets/images/Sample2.jpeg)
 ![ScreenShot](/assets/images/Sample3.jpeg)
-![Video](https://drive.google.com/file/d/18LCsWhLiPK5LdBvpQDfoDQYSan7padOL/view?usp=sharing)
+
+Video: https://drive.google.com/file/d/18LCsWhLiPK5LdBvpQDfoDQYSan7padOL/view?usp=sharing
